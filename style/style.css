@@ -9,56 +9,131 @@
     --regular-weight: 400;
 }
 
+/***************      section header        *****************/
+
 a {
     text-decoration: none;
     color: #333333;
-    font-weight: 500;
+    font-weight: var(--primary-weight);
     font-size: 15px;
     line-height: 16px;
     font-style: normal;
+    align-items: center;
+    display: flex;
 }
 
-/*.header-logo{*/
-/*    font-weight: 700;*/
-/*    cursor: pointer;*/
-/*    margin-right: 41px;*/
-/*}*/
+.header-logo{
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
 .header-nav{
     display: flex;
     align-items: center;
     font-family: 'Museo Sans Cyrl', sans-serif;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
+
 .header-list{
     display: flex;
-    flex-flow: row wrap;
+    margin-right: auto;
+    justify-content: center;
+    margin-left: 25px;
+}
+
+.header-info{
+    transform: translateX(60px);
+    display: flex;
+    align-items: center;
 }
 
 .header-item{
     margin: 32px 16px;
 }
 
-.righted{
-    order: 999;
-    margin-left: auto;
+.button{
+    padding: 13px 24px;
+    border-radius: 60px;
+    background: var(--primary-color);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 14px;
 }
 
-.block{
+.button:hover{
+    background: #7181FC;
+}
+
+.header-language{
+    padding: 12px 16px;
+    border: solid 1px #000000;
+    border-radius: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-right: 32px;
 }
 
-/*button{*/
-/*    color: #FFFFFF;*/
-/*    font-weight: 500;*/
-/*    font-size: 14px;*/
-/*    line-height: 14px;*/
-/*    background: var(--primary-color);*/
-/*    border:none;*/
-/*    border-radius: 60px;*/
-/*    padding: 13px 24px;*/
-/*}*/
+img{
+    cursor: pointer;
+    padding-left: 13px;
+}
+
+/*************************       section trade         ***************/
+.trade{
+    background: rgba(98, 72, 255, .1);
+    /*opacity: 0.1;*/
+}
+
+h1{
+    font-size: 64px;
+    font-weight: var(--primary-weight);
+    line-height: 72px;
+    width: 585px;
+    font-family: 'Museo Sans Cyrl', sans-serif;
+    color: #333333;
+}
+
+.trade-capture{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: var(--regular-weight);
+    font-size: 18px;
+    line-height: 30px;
+    width: 483px;
+    margin: 32px 0 48px;
+}
+
+.trade-block{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 106px;
+}
+
+.trade-info{
+    padding-top: 39px;
+}
+
+.trade-info .button{
+    padding: 20px 64px;
+    font-size: 16px;
+}
+
+
+/****************   section   getting   *************/
+
+
+h2{
+    font-family: "Museo Sans Cyrl", sans-serif;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 66px;
+    width: 483px;
+    padding-top: 140px;
+}
+
+
 
 
 
