@@ -1,11 +1,11 @@
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-:root{
+:root {
     --primary-color: #6248FF;
-    --primary-text : 'Museo Sans 500 Medium',sans-serif;
+    --primary-text: 'Museo Sans 500 Medium', sans-serif;
     --secondary-text: 'Museo Sans 700 Bold', sans-serif;
 }
 
@@ -41,14 +41,14 @@ a {
     display: flex;
 }
 
-.logo{
+.logo {
     font-family: var(--secondary-text);
     text-transform: uppercase;
     font-size: 15px;
     line-height: 16px;
 }
 
-.header-nav{
+.header-nav {
     display: flex;
     align-items: center;
     font-family: 'Museo Sans Cyrl', sans-serif;
@@ -56,25 +56,26 @@ a {
     flex-wrap: wrap;
 }
 
-.header-list{
+.header-list {
     display: flex;
     margin-right: auto;
-    justify-content: center;
-    margin-left: 41px;
+    justify-content: space-between;
+    margin-left: 57px;
+    width: 574px;
 }
 
-.header-info{
+.header-info {
     transform: translateX(60px);
     display: flex;
     align-items: center;
 }
 
-.header-item{
-    margin: 32px 16px;
+.header-item {
+    margin: 32px 0;
     font-family: var(--primary-text);
 }
 
-.button{
+.button {
     padding: 13px 24px;
     border-radius: 60px;
     background: var(--primary-color);
@@ -83,39 +84,37 @@ a {
     font-size: 14px;
     line-height: 14px;
     font-family: var(--primary-text);
+    margin-left: 22px;
 }
 
-.button:hover{
+.button:hover {
     background: #7181FC;
 }
 
 .header-language{
-    padding: 12px 16px;
-    border: solid 1px #000000;
+    width: 80px;
+    height: 40px;
     border-radius: 60px;
-    display: flex;
-    align-items: center;
-    margin-right: 32px;
+    border: solid 1px #000000;
 }
-
-.header-language span{
+select {
+    padding: 0 8px;
+    border: none;
+    width: 60px;
+    height: 40px;
+    margin-right: 32px;
     font-size: 15px;
     line-height: 16px;
     background: transparent;
     font-family: var(--primary-text);
 }
 
-.header-language img{
-    cursor: pointer;
-    padding-left: 13px;
-}
-
 /*************************       section trade         ***************/
-.trade{
+.trade {
     background: rgba(98, 72, 255, .1);
 }
 
-h1{
+h1 {
     font-size: 64px;
     line-height: 72px;
     width: 585px;
@@ -123,7 +122,7 @@ h1{
     color: #333333;
 }
 
-.trade-capture{
+.trade-capture {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -132,18 +131,18 @@ h1{
     margin: 32px 0 48px;
 }
 
-.trade-block{
+.trade-block {
     display: flex;
     justify-content: space-between;
     padding-top: 100px;
     padding-bottom: 106px;
 }
 
-.trade-info{
+.trade-info {
     padding-top: 39px;
 }
 
-.trade-info .button{
+.trade-info .button {
     padding: 20px 64px;
     font-size: 16px;
     font-family: var(--primary-text);
@@ -152,14 +151,14 @@ h1{
 
 /****************   section   getting   *************/
 
-.getting-content{
+.getting-content {
     padding-right: 102px;
     position: relative;
     display: flex;
     justify-content: space-between;
 }
 
-h2{
+h2 {
     font-family: var(--primary-text);
     font-size: 56px;
     line-height: 66px;
@@ -169,11 +168,11 @@ h2{
     letter-spacing: 1.1px;
 }
 
-span{
+span {
     background: rgba(98, 72, 255, .1);
 }
 
-.getting-capture{
+.getting-capture {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -183,13 +182,13 @@ span{
     padding-bottom: 32px;
 }
 
-.getting-block{
+.getting-block {
     border: 2px solid var(--primary-color);
     border-radius: 30px;
     width: 483px;
 }
 
-h4{
+h4 {
     font-family: var(--primary-text);
     font-size: 15px;
     line-height: 18px;
@@ -198,7 +197,7 @@ h4{
     padding-left: 32px;
 }
 
-h3{
+h3 {
     font-family: var(--primary-text);
     font-size: 24px;
     line-height: 28.8px;
@@ -207,7 +206,7 @@ h3{
     padding-left: 32px;
 }
 
-.dotted{
+.dotted {
     border: 3px dotted var(--primary-color);
     width: 374px;
     height: 69.5px;
@@ -220,11 +219,11 @@ h3{
     left: 40.5%;
 }
 
-.getting-content .getting-block:nth-child(2){
+.getting-content .getting-block:nth-child(2) {
     margin-top: 155px;
 }
 
-.getting-main .dotted:nth-child(1){
+.getting-main .dotted:nth-child(1) {
     transform: scaleX(-1);
     position: absolute;
     top: 35.5%;
@@ -232,7 +231,7 @@ h3{
     height: 69.5px;
 }
 
-.getting-content .dotted:nth-child(4){
+.getting-content .dotted:nth-child(4) {
     transform: scaleX(-1);
     position: absolute;
     top: 25.5%;
@@ -240,22 +239,22 @@ h3{
     height: 69.5px;
 }
 
-.getting-main:nth-child(2){
+.getting-main:nth-child(2) {
     margin-top: 134px;
 }
 
-.getting-main:nth-child(4){
+.getting-main:nth-child(4) {
     margin-top: 128px;
 }
 
-.getting-main .dotted:nth-child(3){
+.getting-main .dotted:nth-child(3) {
     position: absolute;
     top: 17.5%;
     left: 19.6%;
     height: 69.5px;
 }
 
-.type .dotted{
+.type .dotted {
     position: absolute;
     top: 39.5%;
     left: 40.5%;
@@ -264,54 +263,55 @@ h3{
 
 /******************    section people    *************/
 
-.people h2{
+.people h2 {
     padding-bottom: 45px;
 }
 
-.people-slider{
+.people-slider {
     width: 112px;
     display: flex;
     justify-content: space-between;
 }
 
-.slider-symbol{
+.slider-symbol {
     padding: 18px 20px;
     border-radius: 50%;
     border: 1px solid #E0E0E0;
+    cursor: pointer;
 }
 
-.people-slider .slider-symbol:nth-child(2){
+.people-slider .slider-symbol:nth-child(2) {
     border: 1px solid var(--primary-color);
 }
 
-.people-wrapper{
+.people-wrapper {
     display: flex;
     justify-content: space-between;
 }
 
-.people-description{
+.people-description {
     display: flex;
     align-items: center;
 }
 
-.people-subtitle p:first-child{
+.people-subtitle p:first-child {
     font-family: var(--primary-text);
     font-size: 18px;
     line-height: 30px;
 }
 
-.people-subtitle p:nth-child(2){
+.people-subtitle p:nth-child(2) {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 27px;
 }
 
-.people-subtitle{
+.people-subtitle {
     margin-left: 30px;
 }
 
-.people-text{
+.people-text {
     font-family: var(--primary-text);
     font-size: 24px;
     line-height: 28.8px;
@@ -320,12 +320,12 @@ h3{
     letter-spacing: 0.16px;
 }
 
-.people-heading{
+.people-heading {
     display: flex;
     margin-top: 167px;
 }
 
-.heading-comma{
+.heading-comma {
     margin-right: 15px;
     transform: translateY(-23px);
 }
@@ -340,11 +340,11 @@ h3{
 
 /*************  section frequently  *************/
 
-.frequently-accordion{
+.frequently-accordion {
     padding: 0 102px;
 }
 
-.accordion-close{
+.accordion-close {
     font-family: var(--primary-text);
     font-size: 24px;
     line-height: 28.8px;
@@ -354,11 +354,11 @@ h3{
     margin-bottom: 12px;
 }
 
-.accordion-close:last-child{
+.accordion-close:last-child {
     margin-bottom: 140px;
 }
 
-.accordion-close::before{
+.accordion-close::before {
     position: absolute;
     display: block;
     content: "+";
@@ -366,14 +366,14 @@ h3{
     font-size: 30px;
 }
 
-.accordion-open{
+.accordion-open {
     padding: 32px 40px;
     border: 2px solid var(--primary-color);
     border-radius: 20px;
     margin-bottom: 12px;
 }
 
-.accordion-open p:first-child::before{
+.accordion-open p:first-child::before {
     position: absolute;
     display: block;
     content: "+";
@@ -382,14 +382,14 @@ h3{
     font-size: 30px;
 }
 
-.accordion-open p:nth-child(1){
+.accordion-open p:nth-child(1) {
     font-family: var(--primary-text);
     font-size: 24px;
     line-height: 28.8px;
     letter-spacing: 0.3px;
 }
 
-.accordion-open p:nth-child(2){
+.accordion-open p:nth-child(2) {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -400,17 +400,17 @@ h3{
 
 /******************     section  contact    **********/
 
-.contact{
+.contact {
     background: rgba(98, 72, 255, .08);
 }
 
-.contact h2{
+.contact h2 {
     padding-top: 120px;
     color: #333333;
     padding-bottom: 0;
 }
 
-.contact-aside p:nth-of-type(1){
+.contact-aside p:nth-of-type(1) {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -421,7 +421,7 @@ h3{
     color: #4F4F4F;
 }
 
-.contact-aside p:nth-of-type(2){
+.contact-aside p:nth-of-type(2) {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -430,7 +430,7 @@ h3{
     padding-bottom: 24px;
 }
 
-.contact-aside p:nth-of-type(4){
+.contact-aside p:nth-of-type(4) {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -439,7 +439,7 @@ h3{
     padding-bottom: 16px;
 }
 
-.contact-aside p:nth-of-type(6){
+.contact-aside p:nth-of-type(6) {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -448,7 +448,7 @@ h3{
     padding-bottom: 16px;
 }
 
-.contact-aside p:nth-of-type(8){
+.contact-aside p:nth-of-type(8) {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -457,7 +457,7 @@ h3{
     width: 483px;
 }
 
-.contact-aside p:nth-of-type(3){
+.contact-aside p:nth-of-type(3) {
     font-family: var(--primary-text);
     font-size: 15px;
     line-height: 16px;
@@ -465,7 +465,7 @@ h3{
     color: #333333;
 }
 
-.contact-aside p:nth-of-type(5){
+.contact-aside p:nth-of-type(5) {
     font-family: var(--primary-text);
     font-size: 15px;
     line-height: 16px;
@@ -473,7 +473,7 @@ h3{
     color: #333333;
 }
 
-.contact-aside p:nth-of-type(7){
+.contact-aside p:nth-of-type(7) {
     font-family: var(--primary-text);
     font-size: 15px;
     line-height: 16px;
@@ -481,12 +481,12 @@ h3{
     color: #333333;
 }
 
-.contact-content{
+.contact-content {
     display: flex;
     justify-content: space-between;
 }
 
-.form-block{
+.form-block {
     padding: 80px 70px;
     border: 2px solid var(--primary-color);
     border-radius: 20px;
@@ -494,7 +494,7 @@ h3{
     background: #FFFFFF;
 }
 
-input{
+input {
     height: 40px;
     margin-bottom: 21px;
     display: block;
@@ -505,7 +505,7 @@ input{
     border-radius: 3px;
 }
 
-input::placeholder{
+input::placeholder {
     color: #828282;
     font-family: Montserrat, sans-serif;
     font-weight: 400;
@@ -531,11 +531,11 @@ textarea {
     text-align: start;
 }
 
-textarea::placeholder{
+textarea::placeholder {
     text-align: start;
 }
 
-textarea:focus{
+textarea:focus {
     outline: none !important;
     border: 1px solid #828282;
     border-radius: 3px;
@@ -547,8 +547,7 @@ input:focus {
     border-radius: 3px;
 }
 
-
-.form-block button{
+.form-block button {
     text-transform: uppercase;
     color: #FFFFFF;
     font-family: var(--primary-text);
@@ -568,32 +567,31 @@ input:focus {
 /*    border: 1.6px solid #EB5757;*/
 /*}*/
 
-.footer-block{
+.footer-block {
     display: flex;
     justify-content: space-between;
     margin-top: 27px;
     margin-bottom: 48px;
 }
 
-.block-aside{
+.block-aside {
     width: 585px;
     display: flex;
     justify-content: space-between;
 }
 
-.block-info{
+.block-info {
     width: 585px;
     display: flex;
     justify-content: space-between;
 }
 
-
-.block-aside .logo{
+.block-aside .logo {
     color: #000000;
     width: 45px;
 }
 
-.footer-title{
+.footer-title {
     font-family: var(--primary-text);
     font-size: 18px;
     line-height: 30px;
@@ -602,7 +600,7 @@ input:focus {
     letter-spacing: 0.2px;
 }
 
-.footer-description{
+.footer-description {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -611,7 +609,7 @@ input:focus {
     width: 380px;
 }
 
-.footer-info p{
+.footer-info p {
     font-family: var(--primary-text);
     font-size: 15px;
     line-height: 16px;
@@ -620,19 +618,19 @@ input:focus {
     letter-spacing: 0.2px;
 }
 
-.footer-down{
+.footer-down {
     display: flex;
     justify-content: space-between;
     margin-bottom: 72px;
 }
 
-.down-box{
+.down-box {
     display: flex;
     justify-content: space-between;
     width: 790px;
 }
 
-.footer-down p{
+.footer-down p {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 16px;
