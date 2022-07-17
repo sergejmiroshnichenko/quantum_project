@@ -84,21 +84,23 @@ a {
     font-size: 14px;
     line-height: 14px;
     font-family: var(--primary-text);
+    border: none;
 }
 
 .button:hover {
     background: #7181FC;
 }
 
-.header-language{
+.header-language {
     width: 80px;
     height: 40px;
     border-radius: 60px;
     border: solid 1px #000000;
     margin-right: 22px;
 }
+
 select {
-    padding: 0 8px;
+    padding: 0 10px;
     border: none;
     width: 60px;
     height: 40px;
@@ -107,6 +109,18 @@ select {
     line-height: 16px;
     background: transparent;
     font-family: var(--primary-text);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.header-language img{
+    position: absolute;
+    top: 45%;
+    left: 18%;
 }
 
 /*************************       section trade         ***************/
@@ -139,7 +153,7 @@ h1 {
 }
 
 .trade-info {
-    padding-top: 39px;
+    margin-top: 39px;
 }
 
 .trade-info .button {
@@ -168,7 +182,11 @@ h2 {
     letter-spacing: 1.1px;
 }
 
-span {
+span.a {
+    background: rgba(98, 72, 255, .1);
+}
+
+.people-title span{
     background: rgba(98, 72, 255, .1);
 }
 
@@ -344,6 +362,10 @@ h3 {
     padding: 0 102px;
 }
 
+.frequently-box span{
+    background: rgba(98, 72, 255, .1);
+}
+
 .accordion-close {
     font-family: var(--primary-text);
     font-size: 24px;
@@ -364,6 +386,7 @@ h3 {
     content: "+";
     right: 20.5%;
     font-size: 30px;
+    cursor: pointer;
 }
 
 .accordion-open {
@@ -576,14 +599,8 @@ input:focus {
     margin-bottom: 48px;
 }
 
-.block-aside {
-    width: 585px;
-    display: flex;
-    justify-content: space-between;
-}
-
 .block-info {
-    width: 585px;
+    width: 995px;
     display: flex;
     justify-content: space-between;
 }
@@ -609,6 +626,10 @@ input:focus {
     line-height: 27px;
     color: #4F4F4F;
     width: 380px;
+}
+
+.footer-info{
+    margin-left: 65px;
 }
 
 .footer-info p {
@@ -640,32 +661,35 @@ input:focus {
     color: #828282;
 }
 
-.header-burger{
+.header-burger {
     display: none;
 }
 
 /*************  768px  **************/
 
-@media  (max-width: 768px) {
-    .header-info{
+@media (max-width: 768px) {
+
+    /*************   section  header 760px   **********/
+
+    .header-info {
         padding: 0 43px;
         transform: translateX(0);
         margin-left: auto;
     }
 
-    .button{
+    .button {
         margin: 20px 0;
     }
 
-    .logo{
+    .logo {
         display: none;
     }
 
-    .header-list{
+    .header-list {
         display: none;
     }
 
-    .header-language{
+    .header-language {
         display: none;
     }
 
@@ -690,8 +714,8 @@ input:focus {
     .header-burger::before,
     .header-burger::after {
         position: absolute;
-        width: 100%;
-        height: 12%;
+        width: 18px;
+        height: 2px;
         transition: all 0.3s ease 0s;
         background-color: #333333;;
         left: 0;
@@ -729,58 +753,289 @@ input:focus {
         transform: rotate(45deg) translate(0px, 50%)
     }
 
+    /******************************************   section  trade 760px   **********/
 
-
-    .trade-block{
+    .trade-block {
         display: block;
         padding: 0 40px;
         text-align: center;
     }
 
-    h1{
+    .trade-info{
+        margin-top: 0;
+    }
+
+    h1 {
         width: 100%;
         letter-spacing: 0.75px;
         margin-left: -4px;
+        padding-top: 40px;
     }
 
-    .trade-capture{
-        width: 508px;
+    .trade-capture {
+        width: 100%;
         margin: 0 auto;
         padding-top: 32px;
     }
 
-    .trade-info .button{
+    .trade-info .button {
         margin-top: 48px;
     }
 
-    .trade-block img{
+    .info-box{
+        padding: 0 90px;
+        margin: 0 auto;
+    }
+
+    .trade-block img {
         width: 418px;
-        height: 450px;
         padding-top: 5px;
         margin-bottom: 24px;
     }
 
-    h2{
+    h2 {
         padding: 120px 40px 56px 40px;
         width: 419px;
     }
 
-    h2 span{
+    /****************************************************   section  getting 760px   **********/
+
+    .getting-title span.b, .getting-title span.a {
         letter-spacing: 0.1px;
+        background: linear-gradient(to bottom, white 55%, rgba(98, 72, 255, .1) 45%)
     }
 
-    .getting-content{
+    .getting-content {
         padding: 0 40px;
     }
 
-    .getting-block{
+    .getting-block {
         width: 325px;
         height: 230px;
     }
 
-    .getting-capture{
+    .getting-capture {
         width: 265px;
     }
+
+    .type .getting-main:nth-child(1) {
+        padding-top: 15px;
+    }
+
+    .dotted {
+        width: 193px;
+        height: 58.5px;
+        top: -5.5%;
+        left: 47.5%;
+    }
+
+    .getting-main:nth-child(4) {
+        margin-top: 115px;
+    }
+
+    .getting-main:nth-child(2){
+        margin-top: 125px;
+    }
+
+    .getting-block.b{
+        height: 260px;
+    }
+
+    .getting-block.c{
+        height: 260px;
+    }
+
+    .getting-block.d{
+        height: 293px;
+        margin-top: -10px;
+    }
+
+    .getting-block.dotted.d{
+        height: 58.5px;
+        left: 48%;
+    }
+
+    .getting-block.dotted.c{
+        height: 58.5px;
+        left: 27%;
+    }
+
+    .getting-block.dotted.a{
+        height: 58.5px;
+    }
+
+    /********************************************************   section  people 760px   **********/
+
+    .people-text{
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 59px;
+    }
+
+    .people-wrapper{
+        display: block;
+        text-align: center;
+        padding: 0 40px;
+    }
+
+    .people-heading{
+        display: block;
+        margin-top: -75px;
+    }
+
+    .heading-comma{
+        margin-right: 0;
+        transform: translateY(190px);
+    }
+
+    .people-description{
+        display: block;
+    }
+
+    .people-subtitle{
+        margin-left: 0;
+    }
+
+    .people-subtitle p:nth-child(1){
+        padding-top: 10px;
+    }
+
+    .people-wrapper h2{
+        padding-left: 0;
+        text-align: start;
+        letter-spacing: 0.2px;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .people-title{
+        padding-right: 179px;
+    }
+
+    .people-slider{
+        width: 100%;
+        transform: translateY(165px);
+    }
+
+    .heading-box{
+        padding: 0 90px;
+    }
+
+    /***************************************************************   section  frequently 760px   **********/
+
+    .frequently-box{
+        padding-right: 179px;
+    }
+
+    .frequently-box h2{
+        width: 100%;
+        letter-spacing: 0.3px;
+    }
+
+    .frequently-accordion{
+        padding: 0 40px;
+    }
+
+    .accordion-close::before {
+        right: 11.5%;
+    }
+
+    .accordion-open{
+        padding-right: 90px;
+    }
+
+    .accordion-open p:nth-child(2){
+        width: 100%;
+    }
+
+    .accordion-open p:first-child::before{
+        right: 11.5%;
+    }
+
+    /******************************************************   section  contact 760px   **********/
+
+    .contact{
+        padding-bottom: 1px;
+    }
+
+    .contact-content{
+        display: block;
+        margin-top: -20px;
+    }
+
+    .contact-box{
+        margin: 0 auto;
+    }
+
+    .contact-box h2{
+        width: 100%;
+        padding-left: 0;
+    }
+    
+    .contact-aside h2{
+        text-align: center;
+        padding-top: 45px;
+    }
+
+    .contact-aside{
+        padding: 0 130px;
+    }
+
+    .contact-aside p:nth-of-type(1){
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .contact-aside p:nth-of-type(8){
+        width: 100%;
+    }
+
+    .contact-form{
+        padding: 0 130px;
+    }
+
+    .input-box{
+        padding-right: 20px;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    .form-block{
+        margin: 50px 0;
+    }
+
+    /******************************************************   section  footer 760px   **********/
+    /*.footer{*/
+    /*    padding: 0 120px;*/
+    /*}*/
+
+    .footer-block{
+        display: block;
+        padding: 0 130px;
+    }
+
+    .block-aside .logo{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .block-aside{
+        display: block;
+    }
+
+    .aside-box{
+        padding: 0 231px;
+    }
+
+    .aside-box .logo{
+        width: 100%;
+        padding-top: 30px;
+    }
+
+
+
 }
 
 
