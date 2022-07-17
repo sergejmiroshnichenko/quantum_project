@@ -76,7 +76,6 @@ a {
 }
 
 .button {
-    padding: 13px 24px;
     border-radius: 60px;
     background: var(--primary-color);
     color: #FFFFFF;
@@ -85,6 +84,11 @@ a {
     line-height: 14px;
     font-family: var(--primary-text);
     border: none;
+    max-width: 167px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    padding: 13px 24px;
 }
 
 .button:hover {
@@ -188,8 +192,9 @@ span.a {
     background: rgba(98, 72, 255, .1);
 }
 
-.people-title span {
+.span-width {
     background: rgba(98, 72, 255, .1);
+    padding-right: 202px;
 }
 
 .getting-capture {
@@ -366,6 +371,7 @@ h3 {
 
 .frequently-box span {
     background: rgba(98, 72, 255, .1);
+    padding-right: 10px;
 }
 
 .accordion-close {
@@ -590,7 +596,7 @@ input:focus {
     width: 100%;
 }
 
-.button-box{
+.button-box {
 
 }
 
@@ -612,7 +618,7 @@ input:focus {
     justify-content: space-between;
 }
 
-.block-info div:nth-child(1){
+.block-info div:nth-child(1) {
     margin-right: 30px;
 }
 
@@ -920,6 +926,11 @@ input:focus {
         padding-right: 179px;
     }
 
+    .span-width {
+        background: rgba(98, 72, 255, .1);
+        padding-right: 10px;
+    }
+
     .people-slider {
         width: 100%;
         transform: translateY(165px);
@@ -1013,9 +1024,10 @@ input:focus {
     }
 
 
-    .button-box button{
+    .button-box button {
 
     }
+
     /******************************************************   section  footer 760px   **********/
     .footer-block {
         display: block;
@@ -1063,7 +1075,7 @@ input:focus {
         flex-direction: column;
     }
 
-    .block-info div:nth-child(1){
+    .block-info div:nth-child(1) {
         padding: 0 130px;
     }
 
@@ -1071,40 +1083,299 @@ input:focus {
         margin-right: 0;
     }
 
-    .footer-title{
+    .footer-title {
         text-align: center;
     }
 
-    .footer-description{
+    .footer-description {
         width: 100%;
     }
 
-    .footer-down{
+    .footer-down {
         padding: 0 130px;
         flex-direction: column;
         margin-top: -5px;
     }
-    
-    .footer-down p:nth-child(1){
+
+    .footer-down p:nth-child(1) {
         text-align: center;
     }
 
-    .down-box{
+    .down-box {
         flex-direction: column;
         text-align: center;
         width: 100%;
         margin-top: 15px;
     }
 
-    .down-box p:nth-child(2), .down-box p:nth-child(3), .down-box p:nth-child(4){
+    .down-box p:nth-child(2), .down-box p:nth-child(3), .down-box p:nth-child(4) {
         margin-top: 15px;
     }
 
-    .footer-block{
+    .footer-block {
         margin-top: 60px;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+        display: block;
+    }
+
+    .button {
+        display: none;
+    }
+
+    .header-nav {
+        padding: 30px 20px 34px 20px;
+    }
+
+    .header-info {
+        padding-right: 3px;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .trade-block {
+        text-align: start;
+        padding: 0 25px;
+        margin-top: -10px;
+    }
+
+    .info-box {
+        padding: 0;
+        margin-top: -7px;
+        margin-left: -4px;
+    }
+
+    .info-box .button {
+        display: block;
+        margin-top: 32px;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .trade-box {
+        padding: 0 15px;
+    }
+
+    .trade-box img {
+        max-width: 280px;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .span-width {
+        background: rgba(98, 72, 255, .1);
+        padding-right: 70px;
+    }
+
+    .getting-title span.a {
+        letter-spacing: 0.1px;
+        background: rgba(98, 72, 255, .1);
+        padding-right: 10px;
+    }
+
+     .getting-title span.b {
+        letter-spacing: 0.1px;
+        background: white;
+    }
+
+    .getting-box h2 {
+        font-size: 40px;
+        line-height: 44px;
+        padding: 0 20px;
+        width: 260px;
+    }
+
+    .getting-box {
+        margin-top: 90px;
+        margin-bottom: 40px;
     }
 
 
+
+
+
+
+    h2 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .people-wrapper {
+        padding: 0 20px;
+    }
+
+    .people-title{
+        padding-right: 0;
+    }
+
+    .people{
+        margin-top: 83%;
+    }
+
+    .people-heading{
+        margin-top: -86px;
+    }
+
+    .heading-box{
+        padding: 0;
+    }
+
+    .people-subtitle{
+        margin-top: -5px;
+    }
+
+    .people-text{
+        margin-top: 15px;
+    }
+
+    .people-data{
+        margin-top: 40px;
+    }
+
+    .people-slider{
+        transform: translateY(462px);
+    }
+
+    .span-word{
+        background: rgba(98, 72, 255, .1);
+    }
+
+    .span-width {
+        background: rgba(98, 72, 255, .1);
+        padding-right: 75px;
+    }
+
+    .frequently-box{
+        margin-top: -20px;
+    }
+
+    .frequently-box h2{
+        padding-top: 120px;
+        padding-left: 20px;
+    }
+
+    .frequently-accordion{
+        padding: 0 20px;
+        margin-top: -20px;
+    }
+
+    .accordion-close, .accordion-open p:nth-child(1){
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+
+    .accordion-close{
+        padding-left: 16px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .accordion-open p:nth-child(1){
+        padding-right: 75px;
+        letter-spacing: 0.1px;
+    }
+
+    .accordion-close::before{
+        right: 13.5%;
+    }
+
+    .accordion-open{
+        padding-right: 0;
+        padding-left: 16px;
+        padding-top: 25px;
+    }
+
+    .accordion-open p:first-child::before{
+        right: 13.5%;
+    }
+
+    .accordion-open p:nth-child(2){
+        letter-spacing: 0.65px;
+        margin-bottom: -5px;
+    }
+
+
+    /********************   section  contact 320px  *******************/
+
+    .contact-aside{
+        padding: 0 20px;
+    }
+    
+    .contact-aside h2{
+        text-align: start;
+        letter-spacing: 0.1px;
+    }
+
+    .contact-content{
+        margin-top: -54px;
+    }
+
+    .contact-box{
+        margin-top: -8px;
+    }
+
+    .contact-aside p:nth-of-type(1){
+        margin-top: -8px;
+    }
+
+    .contact-aside p:nth-of-type(2){
+        padding-bottom: 12px;
+    }
+
+    .contact-form{
+        padding: 0 20px;
+    }
+
+    .form-block{
+        padding: 48px 16px;
+    }
+
+    /**********************  footer  320px  ***************************/
+
+    .footer-block{
+        margin-top: 45px;
+    }
+
+    .footer-info{
+        display: block;
+        padding: 0 20px;
+        margin-top: 45px;
+    }
+
+    .footer-info p{
+        margin-bottom: 32px;
+    }
+
+    .block-info div:nth-child(1){
+        padding: 0 20px;
+        margin-top: -15px;
+    }
+    
+    .footer-title{
+        text-align: start;
+    }
+
+    .block-info div:nth-child(2){
+        padding: 0 20px;
+    }
+
+    .block-info div:nth-child(2){
+        margin-top: 25px;
+    }
+
+    .footer-down{
+        padding: 0;
+    }
+
+    .footer-down{
+        margin-top: -15px;
+    }
 }
 
 
