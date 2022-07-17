@@ -117,7 +117,7 @@ select {
 }
 
 
-.header-language img{
+.header-language img {
     position: absolute;
     top: 45%;
     left: 18%;
@@ -157,9 +157,11 @@ h1 {
 }
 
 .trade-info .button {
-    padding: 20px 64px;
     font-size: 16px;
     font-family: var(--primary-text);
+    max-width: 257px;
+    height: 54px;
+    width: 100%;
 }
 
 
@@ -186,7 +188,7 @@ span.a {
     background: rgba(98, 72, 255, .1);
 }
 
-.people-title span{
+.people-title span {
     background: rgba(98, 72, 255, .1);
 }
 
@@ -362,7 +364,7 @@ h3 {
     padding: 0 102px;
 }
 
-.frequently-box span{
+.frequently-box span {
     background: rgba(98, 72, 255, .1);
 }
 
@@ -578,12 +580,18 @@ input:focus {
     line-height: 14px;
     text-align: center;
     border: none;
-    padding: 20px 64px;
     background: var(--primary-color);
     border-radius: 60px;
     cursor: pointer;
     margin: 0 auto;
+    height: 54px;
     display: block;
+    max-width: 172px;
+    width: 100%;
+}
+
+.button-box{
+
 }
 
 /*.input.error{*/
@@ -600,9 +608,12 @@ input:focus {
 }
 
 .block-info {
-    width: 995px;
     display: flex;
     justify-content: space-between;
+}
+
+.block-info div:nth-child(1){
+    margin-right: 30px;
 }
 
 .block-aside .logo {
@@ -628,8 +639,8 @@ input:focus {
     width: 380px;
 }
 
-.footer-info{
-    margin-left: 65px;
+.footer-info {
+    margin-left: 95px;
 }
 
 .footer-info p {
@@ -670,7 +681,6 @@ input:focus {
 @media (max-width: 768px) {
 
     /*************   section  header 760px   **********/
-
     .header-info {
         padding: 0 43px;
         transform: translateX(0);
@@ -754,14 +764,13 @@ input:focus {
     }
 
     /******************************************   section  trade 760px   **********/
-
     .trade-block {
         display: block;
         padding: 0 40px;
         text-align: center;
     }
 
-    .trade-info{
+    .trade-info {
         margin-top: 0;
     }
 
@@ -782,15 +791,16 @@ input:focus {
         margin-top: 48px;
     }
 
-    .info-box{
+    .info-box {
         padding: 0 90px;
         margin: 0 auto;
     }
 
     .trade-block img {
-        width: 418px;
+        width: 100%;
         padding-top: 5px;
         margin-bottom: 24px;
+        max-width: 418px;
     }
 
     h2 {
@@ -799,7 +809,6 @@ input:focus {
     }
 
     /****************************************************   section  getting 760px   **********/
-
     .getting-title span.b, .getting-title span.a {
         letter-spacing: 0.1px;
         background: linear-gradient(to bottom, white 55%, rgba(98, 72, 255, .1) 45%)
@@ -833,74 +842,73 @@ input:focus {
         margin-top: 115px;
     }
 
-    .getting-main:nth-child(2){
+    .getting-main:nth-child(2) {
         margin-top: 125px;
     }
 
-    .getting-block.b{
+    .getting-block.b {
         height: 260px;
     }
 
-    .getting-block.c{
+    .getting-block.c {
         height: 260px;
     }
 
-    .getting-block.d{
+    .getting-block.d {
         height: 293px;
         margin-top: -10px;
     }
 
-    .getting-block.dotted.d{
+    .getting-block.dotted.d {
         height: 58.5px;
         left: 48%;
     }
 
-    .getting-block.dotted.c{
+    .getting-block.dotted.c {
         height: 58.5px;
         left: 27%;
     }
 
-    .getting-block.dotted.a{
+    .getting-block.dotted.a {
         height: 58.5px;
     }
 
     /********************************************************   section  people 760px   **********/
-
-    .people-text{
+    .people-text {
         width: 100%;
         margin: 0 auto;
         padding-top: 59px;
     }
 
-    .people-wrapper{
+    .people-wrapper {
         display: block;
         text-align: center;
         padding: 0 40px;
     }
 
-    .people-heading{
+    .people-heading {
         display: block;
         margin-top: -75px;
     }
 
-    .heading-comma{
+    .heading-comma {
         margin-right: 0;
         transform: translateY(190px);
     }
 
-    .people-description{
+    .people-description {
         display: block;
     }
 
-    .people-subtitle{
+    .people-subtitle {
         margin-left: 0;
     }
 
-    .people-subtitle p:nth-child(1){
+    .people-subtitle p:nth-child(1) {
         padding-top: 10px;
     }
 
-    .people-wrapper h2{
+    .people-wrapper h2 {
         padding-left: 0;
         text-align: start;
         letter-spacing: 0.2px;
@@ -908,31 +916,30 @@ input:focus {
         padding-right: 0;
     }
 
-    .people-title{
+    .people-title {
         padding-right: 179px;
     }
 
-    .people-slider{
+    .people-slider {
         width: 100%;
         transform: translateY(165px);
     }
 
-    .heading-box{
+    .heading-box {
         padding: 0 90px;
     }
 
     /***************************************************************   section  frequently 760px   **********/
-
-    .frequently-box{
+    .frequently-box {
         padding-right: 179px;
     }
 
-    .frequently-box h2{
+    .frequently-box h2 {
         width: 100%;
         letter-spacing: 0.3px;
     }
 
-    .frequently-accordion{
+    .frequently-accordion {
         padding: 0 40px;
     }
 
@@ -940,100 +947,162 @@ input:focus {
         right: 11.5%;
     }
 
-    .accordion-open{
+    .accordion-open {
         padding-right: 90px;
     }
 
-    .accordion-open p:nth-child(2){
+    .accordion-open p:nth-child(2) {
         width: 100%;
     }
 
-    .accordion-open p:first-child::before{
+    .accordion-open p:first-child::before {
         right: 11.5%;
     }
 
     /******************************************************   section  contact 760px   **********/
-
-    .contact{
+    .contact {
         padding-bottom: 1px;
     }
 
-    .contact-content{
+    .contact-content {
         display: block;
         margin-top: -20px;
     }
 
-    .contact-box{
+    .contact-box {
         margin: 0 auto;
     }
 
-    .contact-box h2{
+    .contact-box h2 {
         width: 100%;
         padding-left: 0;
     }
-    
-    .contact-aside h2{
+
+    .contact-aside h2 {
         text-align: center;
         padding-top: 45px;
     }
 
-    .contact-aside{
+    .contact-aside {
         padding: 0 130px;
     }
 
-    .contact-aside p:nth-of-type(1){
+    .contact-aside p:nth-of-type(1) {
         width: 100%;
         padding-bottom: 30px;
     }
 
-    .contact-aside p:nth-of-type(8){
+    .contact-aside p:nth-of-type(8) {
         width: 100%;
     }
 
-    .contact-form{
+    .contact-form {
         padding: 0 130px;
     }
 
-    .input-box{
+    .input-box {
         padding-right: 20px;
     }
 
-    input{
+    input {
         width: 100%;
     }
 
-    .form-block{
+    .form-block {
         margin: 50px 0;
     }
 
-    /******************************************************   section  footer 760px   **********/
-    /*.footer{*/
-    /*    padding: 0 120px;*/
-    /*}*/
 
-    .footer-block{
+    .button-box button{
+
+    }
+    /******************************************************   section  footer 760px   **********/
+    .footer-block {
         display: block;
-        padding: 0 130px;
     }
 
-    .block-aside .logo{
+    .block-aside .logo {
         display: block;
         margin: 0 auto;
     }
 
-    .block-aside{
-        display: block;
+    .block-aside {
+        padding: 0 130px;
     }
 
-    .aside-box{
+    .aside-box {
         padding: 0 231px;
     }
 
-    .aside-box .logo{
+    .aside-box .logo {
         width: 100%;
         padding-top: 30px;
     }
 
+    .block-info div:nth-child(1) {
+        order: 2;
+    }
+
+    .block-info div:nth-child(2) {
+        order: 3;
+        padding: 0 130px;
+        margin-top: 32px;
+    }
+
+    .footer-info {
+        order: 1;
+        margin-left: 0;
+        display: flex;
+        padding: 0 40px;
+        justify-content: space-between;
+        margin-top: 54px;
+        margin-bottom: 15px;
+    }
+
+    .block-info {
+        flex-direction: column;
+    }
+
+    .block-info div:nth-child(1){
+        padding: 0 130px;
+    }
+
+    .block-info div:nth-child(1) {
+        margin-right: 0;
+    }
+
+    .footer-title{
+        text-align: center;
+    }
+
+    .footer-description{
+        width: 100%;
+    }
+
+    .footer-down{
+        padding: 0 130px;
+        flex-direction: column;
+        margin-top: -5px;
+    }
+    
+    .footer-down p:nth-child(1){
+        text-align: center;
+    }
+
+    .down-box{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .down-box p:nth-child(2), .down-box p:nth-child(3), .down-box p:nth-child(4){
+        margin-top: 15px;
+    }
+
+    .footer-block{
+        margin-top: 60px;
+    }
 
 
 }
