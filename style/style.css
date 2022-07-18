@@ -441,6 +441,7 @@ h3 {
     border: 2px solid var(--primary-color);
     border-radius: 20px;
     margin-bottom: 12px;
+    position: relative;
 }
 
 .accordion-close:last-child {
@@ -451,7 +452,7 @@ h3 {
     position: absolute;
     display: block;
     content: "+";
-    right: 20.5%;
+    right: 4.5%;
     font-size: 30px;
     cursor: pointer;
 }
@@ -467,7 +468,7 @@ h3 {
     position: absolute;
     display: block;
     content: "+";
-    right: 20.5%;
+    right: 0.5%;
     transform: rotate(45deg);
     font-size: 30px;
 }
@@ -477,6 +478,7 @@ h3 {
     font-size: 24px;
     line-height: 28.8px;
     letter-spacing: 0.3px;
+    position: relative;
 }
 
 .accordion-open p:nth-child(2) {
@@ -1006,7 +1008,6 @@ input:focus {
         padding-left: 0;
         text-align: start;
         letter-spacing: 0.2px;
-        width: 100%;
         padding-right: 0;
     }
 
@@ -1210,14 +1211,67 @@ input:focus {
     }
 }
 
-/*@media (min-width: 321px) and (max-width: 737px){*/
-/*    .getting-main.b{*/
-/*        margin-top: 0;*/
-/*    }*/
-/*    .getting-main.a .dot{*/
-/*        display: none;*/
-/*    }*/
-/*}*/
+@media (min-width: 321px) and (max-width: 479px){
+    h2{
+        font-size: 42px;
+        line-height: 52px;
+        width: 318px;
+    }
+
+    h1{
+        font-size: 52px;
+        line-height: 58px;
+    }
+
+    .info-box{
+        padding: 0 40px;
+    }
+
+    .blog-card.b {
+        margin-top: -95px;
+        margin-bottom: 20px;
+    }
+
+    .blog-card.c {
+        margin-top: -95px;
+    }
+
+    .blog-card{
+        width: 100%;
+    }
+
+    .contact-aside{
+        padding: 0 40px;
+    }
+
+    .contact-form{
+        padding: 0 40px;
+    }
+
+    .form-block{
+        padding: 64px 28px;
+    }
+
+    .block-info div:nth-child(1) {
+        padding: 0 40px;
+    }
+
+    .block-info div:nth-child(2){
+        padding: 0 40px;
+    }
+
+    .footer-down{
+        padding: 0 40px;
+    }
+
+    .footer-info{
+        flex-direction: column;
+    }
+
+    .accordion-open{
+        padding: 0 40px;
+    }
+}
 
 @media (max-width: 320px) {
     .logo {
@@ -1336,10 +1390,10 @@ input:focus {
         margin-top: -95px;
     }
 
-
     h2 {
         font-size: 40px;
         line-height: 44px;
+        width: 100%;
     }
 
     .people-wrapper {
