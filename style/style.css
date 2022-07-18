@@ -171,11 +171,54 @@ h1 {
 
 /****************   section   getting   *************/
 
+
+.getting-blog {
+    display: flex;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    align-content: space-between;
+    /*height: 841px;*/
+    padding-right: 102px;
+    justify-content: space-between;
+}
+
+.blog-card {
+    width: calc((100% / 2) - 68px);
+    margin-bottom: 120px;
+}
+
+.blog-card.c{
+    margin-top: 160px;
+}
+
+.blog-card.b{
+    margin-top: -180px;
+}
+
+.blog-card.d{
+    margin-bottom: 0;
+}
+
+/*.blog-card-img {*/
+/*    width: 100%*/
+/*}*/
+
+.card-block {
+    width: 100%;
+    border: 2px solid #6248FF;
+    border-radius: 30px;
+}
+
+
+
+
+
 .getting-content {
     padding-right: 102px;
     position: relative;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 h2 {
@@ -202,9 +245,10 @@ span.a {
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-    width: 419px;
+    /*width: 419px;*/
     padding-left: 32px;
     padding-bottom: 32px;
+    padding-right: 32px;
 }
 
 .getting-block {
@@ -212,6 +256,12 @@ span.a {
     border-radius: 30px;
     width: 483px;
 }
+
+/*.getting-main.a img{*/
+/*    left: 40.5%;*/
+/*    position: absolute;*/
+/*    top: 10.5%;*/
+/*}*/
 
 h4 {
     font-family: var(--primary-text);
@@ -248,12 +298,21 @@ h3 {
     margin-top: 155px;
 }
 
+.getting-main{
+    max-width: 485px;
+    width: 100%;
+}
+
 .getting-main .dotted:nth-child(1) {
     transform: scaleX(-1);
     position: absolute;
     top: 35.5%;
     left: 19.6%;
     height: 69.5px;
+}
+
+.getting-main.b{
+    margin-top: -56px;
 }
 
 .getting-content .dotted:nth-child(4) {
@@ -265,7 +324,7 @@ h3 {
 }
 
 .getting-main:nth-child(2) {
-    margin-top: 134px;
+    margin-top: -70px;
 }
 
 .getting-main:nth-child(4) {
@@ -686,7 +745,7 @@ input:focus {
 
 @media (max-width: 768px) {
 
-    /*************   section  header 760px   **********/
+    /*************   section  header 768px   **********/
     .header-info {
         padding: 0 43px;
         transform: translateX(0);
@@ -769,7 +828,7 @@ input:focus {
         transform: rotate(45deg) translate(0px, 50%)
     }
 
-    /******************************************   section  trade 760px   **********/
+    /******************************************   section  trade 768px   **********/
     .trade-block {
         display: block;
         padding: 0 40px;
@@ -814,7 +873,7 @@ input:focus {
         width: 419px;
     }
 
-    /****************************************************   section  getting 760px   **********/
+    /****************************************************   section  getting 768px   **********/
     .getting-title span.b, .getting-title span.a {
         letter-spacing: 0.1px;
         background: linear-gradient(to bottom, white 55%, rgba(98, 72, 255, .1) 45%)
@@ -822,6 +881,29 @@ input:focus {
 
     .getting-content {
         padding: 0 40px;
+        flex-wrap: wrap;
+    }
+
+
+    .getting-blog{
+        padding: 0 40px;
+    }
+
+    .blog-card {
+        width: calc((100% / 2) - 2%);
+        margin-bottom: 116px;
+    }
+
+    .blog-card.b {
+        margin-top: -190px;
+    }
+
+    .blog-card.c {
+        margin-top: 170px;
+    }
+
+    h3{
+        padding-right: 32px;
     }
 
     .getting-block {
@@ -829,13 +911,10 @@ input:focus {
         height: 230px;
     }
 
-    .getting-capture {
-        width: 265px;
-    }
 
-    .type .getting-main:nth-child(1) {
-        padding-top: 15px;
-    }
+    /*.type .getting-main:nth-child(1) {*/
+    /*    padding-top: 15px;*/
+    /*}*/
 
     .dotted {
         width: 193px;
@@ -844,13 +923,22 @@ input:focus {
         left: 47.5%;
     }
 
-    .getting-main:nth-child(4) {
-        margin-top: 115px;
+    .getting-main{
+        max-width: 329px;
+        width: 100%;
     }
 
-    .getting-main:nth-child(2) {
-        margin-top: 125px;
+    .getting-main.b{
+        margin-top: -75px;
     }
+
+    /*.getting-main:nth-child(2) {*/
+    /*    margin-top: 12px;*/
+    /*}*/
+
+    /*.getting-content .getting-block:nth-child(2) {*/
+    /*    margin-top: 115px;*/
+    /*}*/
 
     .getting-block.b {
         height: 260px;
@@ -1115,7 +1203,21 @@ input:focus {
     .footer-block {
         margin-top: 60px;
     }
+
+    .dot{
+        max-width: 193px;
+        width: 100%;
+    }
 }
+
+/*@media (min-width: 321px) and (max-width: 737px){*/
+/*    .getting-main.b{*/
+/*        margin-top: 0;*/
+/*    }*/
+/*    .getting-main.a .dot{*/
+/*        display: none;*/
+/*    }*/
+/*}*/
 
 @media (max-width: 320px) {
     .logo {
@@ -1196,9 +1298,43 @@ input:focus {
         margin-bottom: 40px;
     }
 
+    .getting-blog {
+        padding: 0 20px;
+    }
 
+    .blog-card{
+        width: 100%;
+    }
 
+    .blog-card.c {
+        margin-top: 0;
+    }
 
+    .blog-card.b {
+        margin-top: -95px;
+    }
+
+    h4{
+        padding-top: 24px;
+        padding-left: 24px;
+    }
+
+    .card-block h3 {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .getting-capture{
+        padding: 0 24px 24px;
+    }
+
+    .blog-card.c {
+        margin-top: -95px;
+    }
+
+    .blog-card.d{
+        margin-top: -95px;
+    }
 
 
     h2 {
@@ -1208,14 +1344,11 @@ input:focus {
 
     .people-wrapper {
         padding: 0 20px;
+        margin-top: -42px;
     }
 
     .people-title{
         padding-right: 0;
-    }
-
-    .people{
-        margin-top: 83%;
     }
 
     .people-heading{
