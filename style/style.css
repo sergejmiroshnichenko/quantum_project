@@ -351,16 +351,89 @@ h3 {
     justify-content: space-between;
 }
 
-.slider-symbol {
+
+.fa-angle-right, .fa-angle-left{
+    cursor: pointer;
+    position: relative;
+    color: #000000;;
+    font-size: 14px;
+    outline: 2px solid var(--primary-color);
     padding: 18px 20px;
     border-radius: 50%;
-    border: 1px solid #E0E0E0;
-    cursor: pointer;
 }
 
-.people-slider .slider-symbol:nth-child(2) {
-    border: 1px solid var(--primary-color);
+.fa-angle-right:hover::after,
+.fa-angle-right:hover::before{
+    content: '';
+    position: absolute;
+    border: 3px solid var(--primary-color);
+    left: -15px;
+    right: -15px;
+    top: -15px;
+    bottom: -15px;
+    border-radius: 50%;
+    animation: fa-angle-right 1.8s linear infinite;
 }
+
+.fa-angle-left:hover::after,
+.fa-angle-left:hover::before{
+    content: '';
+    position: absolute;
+    border: 3px solid var(--primary-color);
+    left: -10px;
+    right: -10px;
+    top: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    animation: fa-angle-left 1.8s linear infinite;
+}
+
+@keyframes fa-angle-right {
+    0%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.fa-angle-right:hover::after{
+    animation-delay: 0.5s;
+}
+
+@keyframes fa-angle-left {
+    0%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+}
+
+.fa-angle-left:hover::after{
+    animation-delay: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
 
 .people-wrapper {
     display: flex;
