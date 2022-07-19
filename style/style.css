@@ -355,7 +355,6 @@ h3 {
     justify-content: space-between;
 }
 
-
 .fa-angle-right, .fa-angle-left{
     cursor: pointer;
     position: relative;
@@ -428,16 +427,6 @@ h3 {
 .fa-angle-left:hover::after{
     animation-delay: 0.5s;
 }
-
-
-
-
-
-
-
-
-
-
 
 .people-wrapper {
     display: flex;
@@ -524,7 +513,7 @@ h3 {
     padding-right: 10px;
 }
 
-.accordion-close {
+.accordion-item {
     font-family: var(--primary-text);
     font-size: 24px;
     line-height: 28.8px;
@@ -533,13 +522,14 @@ h3 {
     border-radius: 20px;
     margin-bottom: 12px;
     position: relative;
+    cursor: pointer;
 }
 
-.accordion-close:last-child {
+.accordion-item:last-child {
     margin-bottom: 140px;
 }
 
-.accordion-close::before {
+.accordion-item::before {
     position: absolute;
     display: block;
     content: "+";
@@ -548,23 +538,11 @@ h3 {
     cursor: pointer;
 }
 
-.accordion-open {
-    padding: 32px 40px;
-    border: 2px solid var(--primary-color);
-    border-radius: 20px;
-    margin-bottom: 12px;
-}
-
-.accordion-open p:first-child::before {
-    position: absolute;
-    display: block;
-    content: "+";
-    right: 0.5%;
+.accordion-item.active::before {
     transform: rotate(45deg);
-    font-size: 30px;
 }
 
-.accordion-open p:nth-child(1) {
+.accordion-item p:nth-child(1) {
     font-family: var(--primary-text);
     font-size: 24px;
     line-height: 28.8px;
@@ -572,13 +550,16 @@ h3 {
     position: relative;
 }
 
-.accordion-open p:nth-child(2) {
+.content {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 27px;
     width: 750px;
     padding-top: 24px;
+    transition: 0.3s;
+    overflow: hidden;
+    max-height: 0;
 }
 
 /******************     section  contact    **********/
@@ -1106,7 +1087,7 @@ input:focus {
         padding: 0 40px;
     }
 
-    .accordion-close::before {
+    .accordion-item::before {
         right: 7%;
     }
 
@@ -1114,11 +1095,11 @@ input:focus {
         padding-right: 90px;
     }
 
-    .accordion-open p:nth-child(2) {
+    .accordion-item p:nth-child(2) {
         width: 100%;
     }
 
-    .accordion-open p:first-child::before {
+    .accordion-item p:first-child::before {
         right: -8.5%;
     }
 
@@ -1522,12 +1503,12 @@ input:focus {
         margin-top: -20px;
     }
 
-    .accordion-close, .accordion-open p:nth-child(1){
+    .accordion-item, .accordion-open p:nth-child(1){
         font-size: 18px;
         line-height: 21.6px;
     }
 
-    .accordion-close{
+    .accordion-item{
         padding-left: 16px;
         padding-top: 24px;
         padding-bottom: 24px;
@@ -1538,7 +1519,7 @@ input:focus {
         letter-spacing: 0.1px;
     }
 
-    .accordion-close::before{
+    .accordion-item::before{
         right: 7.5%;
         top: 36%;
     }
@@ -1547,11 +1528,6 @@ input:focus {
         padding-right: 0;
         padding-left: 16px;
         padding-top: 25px;
-    }
-
-    .accordion-open p:first-child::before{
-        right: 8%;
-        top: 18%;
     }
 
     .accordion-open p:nth-child(2){

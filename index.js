@@ -58,7 +58,6 @@ function swiperight() {
     tabRight.addEventListener('click', function () {
         let currentIndex = 0;
         const tabTitleArray = [...tabTitle]
-        console.log(tabTitleArray)
         tabTitleArray.forEach((item, key) => {
             if (item.classList.value.includes('active')) {
                 currentIndex = key;
@@ -111,6 +110,26 @@ function toggleCarusel(index, array){
     array[index].classList.add('active');
 }
 
+
+
+const items = Array.from(document.querySelectorAll('.accordion-item'));
+
+items.forEach((item) => {
+    item.addEventListener('click', itemHandler);
+})
+
+
+function itemHandler(e){
+    e.preventDefault();
+    let currentItem = e.target.closest('.accordion-item');
+    let currentContent = e.target.nextElementSibling;
+    currentItem.classList.toggle('active');
+    if(currentItem.classList.contains('active')){
+        currentContent.style.maxHeight = currentContent.scrollHeight + 'px';
+    } else{
+        currentContent.style.maxHeight = 0;
+    }
+}
 
 
 
