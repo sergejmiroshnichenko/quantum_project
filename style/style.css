@@ -305,7 +305,7 @@ h3 {
     position: absolute;
     top: -21.5%;
     left: 50.6%;
-    height: 100%;
+    height: 50%;
     width: 100%;
 }
 
@@ -472,7 +472,7 @@ h3 {
 .people-description img{
     width: 73px;
     height: 73px;
-    transition: all ease 1s;
+    transition: ease 1s;
 }
 
 .heading-comma {
@@ -517,7 +517,7 @@ h3 {
     font-family: var(--primary-text);
     font-size: 24px;
     line-height: 28.8px;
-    padding: 33.5px 40px;
+    padding: 31.5px 40px;
     border: 2px solid var(--primary-color);
     border-radius: 20px;
     margin-bottom: 12px;
@@ -529,16 +529,16 @@ h3 {
     margin-bottom: 140px;
 }
 
-.accordion-item::before {
+.accordion-title::before {
     position: absolute;
     display: block;
     content: "+";
-    right: 4.5%;
+    right: 0.5%;
     font-size: 30px;
     cursor: pointer;
 }
 
-.accordion-item.active::before {
+.accordion-title.active::before {
     transform: rotate(45deg);
 }
 
@@ -557,7 +557,7 @@ h3 {
     line-height: 27px;
     width: 750px;
     padding-top: 24px;
-    transition: 0.3s;
+    transition: 0.7s ease;
     overflow: hidden;
     max-height: 0;
 }
@@ -1087,10 +1087,6 @@ input:focus {
         padding: 0 40px;
     }
 
-    .accordion-item::before {
-        right: 7%;
-    }
-
     .accordion-open {
         padding-right: 90px;
     }
@@ -1100,7 +1096,7 @@ input:focus {
     }
 
     .accordion-item p:first-child::before {
-        right: -8.5%;
+        right: 1%;
     }
 
     /******************************************************   section  contact 760px   **********/
@@ -1318,6 +1314,15 @@ input:focus {
     .accordion-open{
         padding: 0 40px;
     }
+
+    .accordion-item p:nth-child(1){
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+
+    .accordion-item p:first-child::before{
+        right: -5%;
+    }
 }
 
 @media (max-width: 320px) {
@@ -1503,15 +1508,14 @@ input:focus {
         margin-top: -20px;
     }
 
-    .accordion-item, .accordion-open p:nth-child(1){
+
+    .accordion-item p:nth-child(1){
         font-size: 18px;
         line-height: 21.6px;
     }
 
     .accordion-item{
-        padding-left: 16px;
-        padding-top: 24px;
-        padding-bottom: 24px;
+        padding: 24px 16px;
     }
 
     .accordion-open p:nth-child(1){
@@ -1519,9 +1523,9 @@ input:focus {
         letter-spacing: 0.1px;
     }
 
-    .accordion-item::before{
+    .accordion-title::before{
         right: 7.5%;
-        top: 36%;
+        top: 26%;
     }
 
     .accordion-open{

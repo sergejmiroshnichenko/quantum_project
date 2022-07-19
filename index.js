@@ -111,8 +111,9 @@ function toggleCarusel(index, array){
 }
 
 
+/****************************** АККОРДИОН *******/
 
-const items = Array.from(document.querySelectorAll('.accordion-item'));
+const items = Array.from(document.querySelectorAll('.accordion-title'));
 
 items.forEach((item) => {
     item.addEventListener('click', itemHandler);
@@ -121,7 +122,7 @@ items.forEach((item) => {
 
 function itemHandler(e){
     e.preventDefault();
-    let currentItem = e.target.closest('.accordion-item');
+    let currentItem = e.target.closest('.accordion-title');
     let currentContent = e.target.nextElementSibling;
     currentItem.classList.toggle('active');
     if(currentItem.classList.contains('active')){
