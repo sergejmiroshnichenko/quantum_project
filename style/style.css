@@ -29,6 +29,10 @@
     font-style: normal;
 }
 
+.none{
+    display: none;
+}
+
 /***************      section header        *****************/
 
 a {
@@ -471,9 +475,15 @@ h3 {
     letter-spacing: 0.16px;
 }
 
-.people-heading {
+.tab-item {
     display: flex;
     margin-top: 167px;
+}
+
+.people-description img{
+    width: 73px;
+    height: 73px;
+    transition: all ease 1s;
 }
 
 .heading-comma {
@@ -487,6 +497,20 @@ h3 {
     font-family: var(--primary-text);
     font-size: 15px;
     line-height: 18px;
+}
+
+.dn {
+    display: none;
+}
+
+.tab-item.tab-item.none{
+    display: none;
+}
+
+.tab-item.tab-item.active {
+    border-color: black;
+    bottom: 12px;
+    box-shadow: 0 1px 10px #4dc247;
 }
 
 /*************  section frequently  *************/
@@ -1021,7 +1045,7 @@ input:focus {
         padding: 0 40px;
     }
 
-    .people-heading {
+    .tab-item {
         display: block;
         margin-top: -75px;
     }
@@ -1451,7 +1475,7 @@ input:focus {
         padding-right: 0;
     }
 
-    .people-heading{
+    .tab-item{
         margin-top: -86px;
     }
 
@@ -1611,5 +1635,20 @@ input:focus {
         margin-top: -15px;
     }
 }
+
+.tabs{
+    display: none;
+}
+
+.people-description img:hover {
+    transform: scale(1.15);
+    transition: 1s;
+    cursor: pointer;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+    border-radius:150%;
+}
+
+
 
 

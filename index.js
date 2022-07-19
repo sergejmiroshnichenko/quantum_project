@@ -27,6 +27,95 @@ form.onsubmit = function (){
 
 
 
+/************************************** ТАБЫ ФОТОК *******/
+
+const tabBtns = document.querySelector('.tabs');
+const tabTitle = document.querySelectorAll('.people-slider-mini');
+
+
+tabBtns.addEventListener('click', (event) => {
+        let currentBtn = event.target,
+            tabId = currentBtn.getAttribute('data-tab'),
+            currentText = document.querySelectorAll('.tab-item')
+
+        tabTitle.forEach(function (item) {
+            item.classList.remove('active')
+        })
+
+        currentText.forEach(function (item) {
+                let currentDataText = item.getAttribute('data-tab')
+                tabId === currentDataText ? item.classList.remove('none') : item.classList.add('none')
+            }
+        )
+        currentBtn.classList.add('active')
+    }
+)
+
+/****************************** СДВИГ  ВЛЕВО и ВПРАВО *******/
+
+function swiperight() {
+    const tabRight = document.getElementById('right');
+    tabRight.addEventListener('click', function () {
+        let currentIndex = 0;
+        const tabTitleArray = [...tabTitle]
+        console.log(tabTitleArray)
+        tabTitleArray.forEach((item, key) => {
+            if (item.classList.value.includes('active')) {
+                currentIndex = key;
+            }
+        })
+        if (currentIndex === tabTitleArray.length-1) {
+            currentIndex = 0
+        } else {
+            currentIndex++;
+        }
+        toggleCarusel(currentIndex, tabTitleArray)
+    })
+}
+
+swiperight()
+swipeleft()
+
+function swipeleft() {
+    const tabLeft = document.querySelector('.fa-angle-left');
+    tabLeft.addEventListener('click', function () {
+        let currentIndex = 0;
+        const tabTitleArray = [...tabTitle];
+        tabTitleArray.forEach((item, key) => {
+            if (item.classList.value.includes('active')) {
+                currentIndex = key;
+            }
+        })
+        if (currentIndex - 1 === -1) {
+            currentIndex = tabTitleArray.length-1
+        } else {
+            currentIndex--;
+        }
+        toggleCarusel(currentIndex, tabTitleArray);
+    })
+}
+
+/****************************** КАРУСЕЛЬ *******/
+
+function toggleCarusel(index, array){
+    let dataAttribute = array[index].getAttribute('data-tab');
+    array.forEach(function (item) {
+        item.classList.remove('active');
+    })
+    const currentText = document.querySelectorAll('.tab-item');
+    currentText.forEach(function (item) {
+            let currentDataText = item.getAttribute('data-tab');
+            dataAttribute === currentDataText ? item.classList.remove('none') : item.classList.add('none');
+        }
+    )
+    array[index].classList.add('active');
+}
+
+
+
+
+
+
 
 
 
