@@ -98,7 +98,6 @@ function isFormValid() {
     return isValidInput(form.elements['name']) && isValidInput(form.elements['email']);
 }
 
-
 /************************************** ТАБЫ ФОТОК *******/
 
 const tabBtns = document.querySelector('.tabs');
@@ -182,7 +181,6 @@ function toggleCarusel(index, array) {
     array[index].classList.add('active');
 }
 
-
 /****************************** АККОРДИОН *******/
 
 const items = Array.from(document.querySelectorAll('.accordion-title'));
@@ -190,7 +188,6 @@ const items = Array.from(document.querySelectorAll('.accordion-title'));
 items.forEach((item) => {
     item.addEventListener('click', itemHandler);
 })
-
 
 function itemHandler(e) {
     e.preventDefault();
@@ -200,15 +197,6 @@ function itemHandler(e) {
     if (currentItem.classList.contains('active')) {
         currentContent.style.maxHeight = currentContent.scrollHeight + 'px';
     } else {
-        currentContent.style.maxHeight = 0;
+        currentContent.style.maxHeight = '0';
     }
 }
-
-
-
-
-
-
-
-
-

@@ -1690,14 +1690,11 @@ input.inValid{
 @media (min-width: 321px) and (max-width: 410px){
     .heading-box{
         margin-top: -10px;
+        padding: 0 45px;
     }
 
     .people-professional{
         font-size: 15px;
-    }
-
-    .people-subtitle{
-        width: 150px;
     }
 
     .people-text{
