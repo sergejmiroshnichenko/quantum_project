@@ -1,30 +1,102 @@
-const form = document.getElementById('form'),
-    button = document.getElementById('button'),
-    formInputs = document.querySelectorAll('.input'),
-    inputName = document.getElementById('name'),
-    inputEmail = document.querySelector('.js-input-email');
-
-const p = document.createElement('p');
+const form = document.querySelector('#form'),
+    button = document.querySelector('#button')
 
 
-form.onsubmit = function (){
-    let emailValue = inputEmail.value,
-        nameValue = inputName.value;
+form.addEventListener("input", inputHandler);
+form.addEventListener('submit', submitHandler);
 
-    formInputs.forEach((input) => {
-        if(input.value === ''){
-            input.classList.add('error');
-            input.append(p);
-            p.textContent='Поле пустое';
-            p.style.color='red';
-            // p.position='absolute';
-        }
-    })
-    return false
+
+function submitHandler(e) {
+    e.preventDefault();
+    console.log(form.elements['name'].value, form.elements['email'].value, form.elements['message'].value);
+    alert('The form data can be sent to Fetch, the data in console');
+    clearForm();
+    makeButtonDisabled();
 }
 
+function makeButtonDisabled() {
+    button.setAttribute('disabled', '');
+    button.classList.remove('open');
+}
 
+function makeButtonEnabled() {
+    button.classList.add('open');
+    button.removeAttribute('disabled');
+}
 
+function clearForm() {
+    ['name', 'email', 'message'].forEach(item => {
+        form.elements[item].value = '';
+        form.elements[item].classList.remove('valid');
+        form.elements[item].classList.remove('inValid');
+    });
+}
+
+function inputHandler({target}) {
+    if (isFormValid()) {
+        makeButtonEnabled()
+    } else {
+        makeButtonDisabled()
+    }
+    checkInput(target);
+}
+
+function checkInput(input) {
+    if (isValidInput(input) || input.value.length === 0) {
+        makeInputValid(input)
+        removeErrorLabel(input)
+        if(input.value.length === 0){
+            makeLabelRegular(input)
+        }
+    } else {
+        if (!nasInputLabel(input)) {
+            makeInputInValid(input)
+            createErrorLabel(input)
+        }
+    }
+}
+
+function makeLabelRegular(input) {
+    input.classList.remove('inValid');
+    input.classList.remove('valid');
+}
+
+function removeErrorLabel(input) {
+    const p = input.parentNode.querySelector('p');
+    p && input.parentNode.removeChild(p);
+}
+
+function nasInputLabel(input){
+    return !!input.parentNode.querySelector('p');
+}
+
+function createErrorLabel(input) {
+    const p = document.createElement('p');
+    p.textContent = input.dataset.error;
+    p.classList.add('error-label');
+    input.parentNode.append(p);
+}
+
+function makeInputValid(input) {
+    input.classList.remove('inValid');
+    input.classList.add('valid');
+    input.setAttribute('is-valid', '1');
+}
+
+function makeInputInValid(input) {
+    input.classList.remove('valid');
+    input.classList.add('inValid');
+    input.setAttribute('is-valid', '0');
+}
+
+function isValidInput(input) {
+    const re = new RegExp(input.dataset.reg);
+    return re.test(input.value)
+}
+
+function isFormValid() {
+    return isValidInput(form.elements['name']) && isValidInput(form.elements['email']);
+}
 
 
 /************************************** ТАБЫ ФОТОК *******/
@@ -63,7 +135,7 @@ function swiperight() {
                 currentIndex = key;
             }
         })
-        if (currentIndex === tabTitleArray.length-1) {
+        if (currentIndex === tabTitleArray.length - 1) {
             currentIndex = 0
         } else {
             currentIndex++;
@@ -86,7 +158,7 @@ function swipeleft() {
             }
         })
         if (currentIndex - 1 === -1) {
-            currentIndex = tabTitleArray.length-1
+            currentIndex = tabTitleArray.length - 1
         } else {
             currentIndex--;
         }
@@ -96,7 +168,7 @@ function swipeleft() {
 
 /****************************** КАРУСЕЛЬ *******/
 
-function toggleCarusel(index, array){
+function toggleCarusel(index, array) {
     let dataAttribute = array[index].getAttribute('data-tab');
     array.forEach(function (item) {
         item.classList.remove('active');
@@ -120,14 +192,14 @@ items.forEach((item) => {
 })
 
 
-function itemHandler(e){
+function itemHandler(e) {
     e.preventDefault();
     let currentItem = e.target.closest('.accordion-title');
     let currentContent = e.target.nextElementSibling;
     currentItem.classList.toggle('active');
-    if(currentItem.classList.contains('active')){
+    if (currentItem.classList.contains('active')) {
         currentContent.style.maxHeight = currentContent.scrollHeight + 'px';
-    } else{
+    } else {
         currentContent.style.maxHeight = 0;
     }
 }
@@ -137,54 +209,6 @@ function itemHandler(e){
 
 
 
-
-
-
-// const inputArr = Array.from(form);
-// const validInputArr = [];
-//
-// inputArr.forEach((item) => {
-//     if(item.hasAttribute('data-reg')){
-//         item.setAttribute('is-valid', '0');
-//         validInputArr.push(item);
-//     }
-// })
-//
-//
-// form.addEventListener("input", inputHandler);
-// button.addEventListener('click', buttonHandler);
-//
-// function inputHandler({target}) {
-//     if (target.hasAttribute("data-reg")) {
-//         inputCheck(target);
-//     }
-// }
-//
-// function inputCheck(item) {
-//     const inputValue = item.value;
-//     const inputReg = item.getAttribute("data-reg");
-//     const reg = new RegExp(inputReg);
-//     if (reg.test(inputValue)) {
-//         item.style.border = '1.6px solid #0EAC00';
-//         item.setAttribute('is-valid', '1');
-//     } else {
-//         item.style.border = '1.6px solid #EB5757';
-//         item.setAttribute('is-valid', '0');
-//     }
-// }
-//
-// function buttonHandler(e) {
-//     const isAllValid = [];
-//     validInputArr.forEach((item) => {
-//         isAllValid.push(item.getAttribute('is-valid'));
-//     })
-//     const isValid = isAllValid.reduce((acc,curr) => {
-//         return acc && curr
-//     });
-//     if(!Boolean(Number(isValid))){
-//         e.preventDefault();
-//     }
-// }
 
 
 

@@ -94,9 +94,9 @@ a {
     padding: 13px 24px;
 }
 
-.button:hover {
-    background: #7181FC;
-}
+/*.button:hover {*/
+/*    background: #7181FC;*/
+/*}*/
 
 .header-language {
     width: 80px;
@@ -711,15 +711,19 @@ input:focus {
     border-radius: 3px;
 }
 
+.input-box{
+    position: relative;
+}
+
 .form-block button {
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #828282;
     font-family: var(--primary-text);
     font-size: 16px;
     line-height: 14px;
     text-align: center;
     border: none;
-    background: var(--primary-color);
+    background: #E0E0E0;
     border-radius: 60px;
     cursor: pointer;
     margin: 0 auto;
@@ -728,6 +732,30 @@ input:focus {
     max-width: 172px;
     width: 100%;
 }
+
+button.open{
+    color: #FFFFFF;
+    background: var(--primary-color);
+}
+
+input.valid{
+    border : 1.8px solid #0EAC00;
+}
+
+input.inValid{
+    border: 1.8px solid #EB5757;
+}
+
+.error-label{
+    color: red;
+    position: absolute;
+    bottom: -39%;
+    left: 1%;
+    font-size: 18px;
+
+}
+
+
 
 /********************   footer   ***********/
 
@@ -1142,6 +1170,7 @@ input:focus {
 
     .input-box {
         padding-right: 20px;
+        position: relative;
     }
 
     input {

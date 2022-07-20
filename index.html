@@ -273,13 +273,14 @@
         <p>Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro, Republic of the Marshall Islands, MH 96960</p>
       </div>
       <div class="contact-form">
-        <form class="form-block" action="#" id="form" name="form">
+        <form class="form-block" action="#" id="form" name="form" method="post">
           <div class="input-box">
             <input class="input js-input" type="text"
                    name="name"
                    placeholder="Name"
                    id="name"
-                   data-reg="^[A-z][a-z]*$">
+                   data-reg="^[A-z][a-z]*$"
+                   data-error="incorrect name">
           </div>
 
           <div class="input-box">
@@ -287,15 +288,17 @@
                    name="email"
                    id="email"
                    placeholder="Email"
-                   data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$">
+                   data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+                   data-error="incorrect email">
+
           </div>
 
           <textarea name="message" value=""
                     placeholder="Message">
           </textarea>
-          <button id="button"
+          <button class="button" id="button"
                   name="button"
-                  type="submit">send
+                  type="submit" disabled> send
           </button>
         </form>
       </div>
