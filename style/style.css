@@ -106,6 +106,10 @@ a {
     margin-right: 22px;
 }
 
+.header-language button:hover{
+  background: #7181FC;
+}
+
 select {
     padding: 0 10px;
     border: none;
@@ -127,6 +131,10 @@ select {
     position: absolute;
     top: 45%;
     left: 18%;
+}
+
+.header-info button:hover{
+    background: #7181FC;
 }
 
 /*************************       section trade         ***************/
@@ -168,6 +176,10 @@ h1 {
     max-width: 257px;
     height: 54px;
     width: 100%;
+}
+
+.trade-info .button:hover{
+    background: #7181FC;
 }
 
 /****************   section   getting   *************/
@@ -846,6 +858,10 @@ input.inValid{
         margin-left: auto;
     }
 
+    .header-language button:hover{
+        background: #7181FC;
+    }
+
     .button {
         margin: 20px 0;
     }
@@ -946,6 +962,10 @@ input.inValid{
 
     .trade-info .button {
         margin-top: 48px;
+    }
+
+    .trade-info .button:hover{
+        background: #7181FC;
     }
 
     .info-box {
@@ -1354,6 +1374,7 @@ input.inValid{
     }
 }
 
+
 @media (max-width: 320px) {
     .logo {
         display: block;
@@ -1367,8 +1388,16 @@ input.inValid{
         padding: 30px 20px 34px 20px;
     }
 
+    .header-language button:hover{
+        background: #7181FC;
+    }
+
     .header-info {
         padding-right: 3px;
+    }
+
+    .header-info button{
+        background: #7181FC;
     }
 
     h1 {
@@ -1656,6 +1685,24 @@ input.inValid{
     border-color: var(--primary-color);
     box-shadow: 0 0 10px var(--primary-color);
     border-radius:150%;
+}
+
+@media (min-width: 321px) and (max-width: 410px){
+    .heading-box{
+        margin-top: -10px;
+    }
+
+    .people-professional{
+        font-size: 15px;
+    }
+
+    .people-subtitle{
+        width: 150px;
+    }
+
+    .people-text{
+        padding-top: 69px;
+    }
 }
 
 
